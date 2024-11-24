@@ -4,12 +4,20 @@ using Microsoft.Xna.Framework.Input;
 
 namespace monogame;
 
-public class Game1 : Game
+using LDtk;
+using LDtk.Renderer;
+
+public class Entry : Game
 {
+    LDtkFile _ldtkFile;
+    LDtkWorld _ldtkWorld;
+    ExampleRenderer _renderer;
+
+
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
 
-    public Game1()
+    public Entry()
     {
         _graphics = new GraphicsDeviceManager(this);
         Content.RootDirectory = "Content";
